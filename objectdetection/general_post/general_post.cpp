@@ -54,13 +54,6 @@ const uint32_t kSendDataPort = 0;
 // sleep interval when queue full (unit:microseconds)
 const __useconds_t kSleepInterval = 200000;
 
-// topN result separator
-// such as "idx1:value1,idx2:value2,idx3:value3"
-const string kTopNIndexSeparator = ":";
-const string kTopNValueSeparator = ",";
-
-#ifdef FASTER_RCNN
-
 // size of output tensor vector should be 2.
 const uint32_t kOutputTensorSize = 2;
 const uint32_t kOutputNumIndex = 0;
@@ -94,7 +87,6 @@ const vector<cv::Scalar> kColors {
 // output tensor index
 enum BBoxIndex {kTopLeftX, kTopLeftY, kLowerRigltX, kLowerRightY, kScore};
 
-#endif
 }
  // namespace
 
@@ -131,82 +123,10 @@ bool GeneralPost::SendSentinel() {
   return true;
   }
 
-#ifndef FASTER_RCNN
-string GenerateTopNStr(int32_t top_n, const vector<float> &varr) {
-  // if topN max than size, only return size count
-  if (top_n > varr.size()) {
-    top_n = varr.size();
-  }
-
-  // generate index vector from 0 ~ size -1
-  vector<size_t> idx(varr.size());
-  iota(idx.begin(), idx.end(), 0);
-  // sort by original data
-  sort(idx.begin(), idx.end(),
-       [&varr](size_t i1, size_t i2) {return varr[i1] > varr[i2];});
-
-  // generate result
-  stringstream top_stream;
-  for (int32_t i = 0; i < top_n; i++) {
-    top_stream << idx[i] << kTopNIndexSeparator;
-    top_stream << to_string(varr[idx[i]]) << kTopNValueSeparator;
-  }
-
-  // return string(need sub last character)
-  string result_str = "";
-  top_stream >> result_str;
-  result_str.pop_back();
-  return result_str;
-}
-
-HIAI_StatusT GeneralPost::ClassficationPostProcess(
-  const std::shared_ptr<EngineTrans> &result) {
-  string file_path = result->image_info.path;
-  // check vector
-  if (result->inference_res.empty()) {
-    ERROR_LOG("Failed to deal file=%s. Reason: inference result empty.",
-              file_path.c_str());
-    return HIAI_ERROR;
-  }
-
-  // only need to get first one
-  Output out = result->inference_res[0];
-  int32_t size = out.size / sizeof(float);
-  if (size <= 0) {
-    ERROR_LOG("Failed to deal file=%s. Reason: inference result size=%d error.",
-              file_path.c_str(), size);
-    return HIAI_ERROR;
-  }
-
-  // transform results
-  float *res = new (nothrow) float[size];
-  if (res == nullptr) {
-    ERROR_LOG("Failed to deal file=%s. Reason: new float array failed.",
-              file_path.c_str());
-    return HIAI_ERROR;
-  }
-  errno_t mem_ret = memcpy_s(res, sizeof(float) * size, out.data.get(), out.size);
-  if (mem_ret != EOK) {
-    delete[] res;
-    ERROR_LOG("Failed to deal file=%s. Reason: call memcpy_s failed.",
-              file_path.c_str());
-    return HIAI_ERROR;
-  }
-
-  // get topN
-  int32_t top_n = result->console_params.output_nums;
-  vector<float> varr(res, res + size);
-  string top_n_str = GenerateTopNStr(top_n, varr);
-  delete[] res;
-  INFO_LOG("Success to deal file=%s.", file_path.c_str());
-  INFO_LOG("Top index and confidence:%s", top_n_str.c_str())
-  return HIAI_OK;
-}
-
-#else
 HIAI_StatusT GeneralPost::FasterRcnnPostProcess(
   const shared_ptr<EngineTrans> &result) {
   vector<Output> outputs = result->inference_res;
+  
   if (outputs.size() != kOutputTensorSize) {
     ERROR_LOG("Detection output size does not match.");
     return HIAI_ERROR;
@@ -293,7 +213,6 @@ HIAI_StatusT GeneralPost::FasterRcnnPostProcess(
   }
   return HIAI_OK;
 }
-#endif
 
 HIAI_IMPL_ENGINE_PROCESS("general_post", GeneralPost, INPUT_SIZE) {
 HIAI_StatusT ret = HIAI_OK;
@@ -322,9 +241,5 @@ if (result->err_msg.error) {
 }
 
 // arrange result
-#ifdef FASTER_RCNN
   return FasterRcnnPostProcess(result);
-#else
-  return ClassficationPostProcess(result);
-#endif
 }

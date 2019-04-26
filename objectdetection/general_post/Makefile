@@ -37,7 +37,7 @@ INC_DIR = \
 	-I../common/include \
 
 # link parameters
-CC_FLAGS := $(INC_DIR) -std=c++11 -fPIC -D FASTER_RCNN
+CC_FLAGS := $(INC_DIR) -std=c++11 -fPIC
 
 ifeq ($(mode),)
 mode=AtlasDK
