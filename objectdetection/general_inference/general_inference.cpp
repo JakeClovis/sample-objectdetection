@@ -188,7 +188,6 @@ bool GeneralInference::Inference(
   vector<shared_ptr<hiai::IAITensor>> input_data_vec;
   input_data_vec.push_back(input_data);
 
-#ifdef FASTER_RCNN
   shared_ptr<hiai::AINeuralNetworkBuffer> info_buf = nullptr;
   MAKE_SHARED_NO_THROW(info_buf, hiai::AINeuralNetworkBuffer);
   if (neural_buf == nullptr) {
@@ -214,7 +213,6 @@ bool GeneralInference::Inference(
   shared_ptr<hiai::IAITensor> img_info =
   static_pointer_cast<hiai::IAITensor>(info_buf);
   input_data_vec.push_back(img_info);
-#endif
 
   // Call Process
   // 1. create output tensor

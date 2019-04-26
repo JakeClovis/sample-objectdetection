@@ -38,7 +38,7 @@ INC_DIR = \
 	-I$(HOME)/ascend_ddk/include \
 
 # link parameters
-CC_FLAGS := $(INC_DIR) -g -std=c++11 -fPIC -DCPU_ONLY -D FASTER_RCNN
+CC_FLAGS := $(INC_DIR) -g -std=c++11 -fPIC -DCPU_ONLY
 
 ifeq ($(mode),)
 mode=AtlasDK

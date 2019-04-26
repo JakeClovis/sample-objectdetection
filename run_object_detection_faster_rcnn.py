@@ -41,7 +41,7 @@ MODEL_PATH = '${MODEL_PATH}'
 GRAPH_TEMPLATE_FILE = 'graph.template'
 GRAPH_CONFIG_FILE = 'graph.config'
 
-CPP_EXE = './ascend_cvnetworkverify'
+CPP_EXE = './ascend_objectdetection'
 CONCOLE_LIST = ' {} {} {} {} {}'
 
 

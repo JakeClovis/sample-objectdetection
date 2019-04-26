@@ -42,7 +42,6 @@
 #define INPUT_SIZE 1
 #define OUTPUT_SIZE 1
 
-#ifdef FASTER_RCNN
 template <class T>
 class Tensor {
   public:
@@ -105,7 +104,6 @@ class Tensor {
     std::vector<uint32_t> dims_; // tensor shape
     T* data_; //tensor data
 };
-#endif
 
 /**
  * @brief: inference engine class
@@ -136,16 +134,6 @@ private:
    */
   bool SendSentinel();
 
-#ifndef FASTER_RCNN
-  /**
-   * @brief: send result
-   * @param [in]: result: engine transform image
-   * @return: HIAI_StatusT
-   */
-  HIAI_StatusT ClassficationPostProcess(
-      const std::shared_ptr<EngineTrans> &result);
-
-#else
   /**
    * @brief: mark the oject based on detection result
    * @param [in]: result: engine transform image
@@ -153,7 +141,6 @@ private:
    */
   HIAI_StatusT FasterRcnnPostProcess(
       const std::shared_ptr<EngineTrans> &result);
-#endif
 
 };
 

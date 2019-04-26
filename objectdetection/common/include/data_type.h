@@ -49,9 +49,7 @@ struct ConsoleParams {
   std::string input_path = "";
   // result output path
   std::string output_path = "";
-  // output result count
-  // for classification: means top-N
-  // for faster-RCNN: means output numbers
+  // output categories
   uint32_t output_nums = 0;
 };
 
