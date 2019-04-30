@@ -90,7 +90,7 @@ Before running the application, obtain the source code package and configure the
     -   **-o/output\_path**: directory for storing output images. The default setting is the current directory.
     -   **-c/output\_categories**: number of Faster R-CNN detection categories \(including the background\). The value is an integer ranging from 2 to 32. The default value is  **21**.
 
-    For other parameters, run the  **python3 run\_object\_detection\_faster\_rcnn.py**** ****--help**  command. For details, see the help information.
+    For other parameters, run the  **python3 run\_object\_detection\_faster\_rcnn.py --help**  command. For details, see the help information.
 
 
 ## Downloading Network Models and and Dependency Code Library<a name="en-us_topic_0167511792_section13446115712539"></a>
