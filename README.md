@@ -130,7 +130,7 @@ Before running the application, obtain the source code package and configure the
     </tbody>
     </table>
 
--   Download the dependent software library
+-   Download the dependent software libraries
 
     Download the dependent software libraries to the **sample-objectdetection/script** directory.
 
