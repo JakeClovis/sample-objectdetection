@@ -71,7 +71,7 @@ Before running the application, obtain the source code package and configure the
 
 2.  Go to the path of the executable file of network connectivity.
 
-    **cd \~/HIAI\_PROJECTS/ascend\_workspace/cvnetworkverify/out**
+    **cd \~/HIAI\_PROJECTS/ascend\_workspace/objectdetection/out**
 
 3.  Run the application.
 
