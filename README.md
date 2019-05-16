@@ -1,3 +1,5 @@
+EN|[CN](README_cn.md)
+
 The network connectivity application runs on the Atlas 200 DK or the AI acceleration cloud server and implements the inference function by using Faster R-CNN object detection network.
 
 ## Prerequisites<a name="en-us_topic_0167511792_section412314183119"></a>
