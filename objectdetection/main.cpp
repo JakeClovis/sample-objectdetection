@@ -46,7 +46,7 @@ using namespace std;
 
 namespace {
 // graph id
-const uint32_t kGraphId = 1676964745;
+const uint32_t kGraphId = 1676964756;
 // device id
 const uint32_t kDeviceId = 0;
 // inference engine id
