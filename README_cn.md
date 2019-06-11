@@ -98,7 +98,7 @@
 
     目标检测网络应用中使用的模型是经过转化后的适配Ascend 310芯片的模型，适配Ascend 310的模型的下载及原始网络模型的下载可参考[表1](#zh-cn_topic_0167429321_table2025054712436)。如果您有更好的模型，欢迎上传到[https://github.com/Ascend/models](https://github.com/Ascend/models)进行分享。
 
-    将模型文件（.om文件）下载到“sample-objectdetection/script“目录下。
+    将模型文件（.om文件）上传到Host侧任一属组为HwHiAiUser用户的目录。
 
     **表 1**  检测网络应用使用模型
 

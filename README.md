@@ -56,7 +56,7 @@ Before running the application, obtain the source code package and configure the
 
     **bash deploy.sh 192.168.1.2**
 
-3.  Upload the offline model file to be used and the image which requires inference to the directory of the  **HwHiAiUser**  user on the host. For details, see  [Downloading Network Models and and Dependency Code Library](#en-us_topic_0167511792_section13446115712539).
+3.  Upload the offline model file to be used and the image which requires inference to the directory of the  **HwHiAiUser**  user on the Host. For details, see  [Downloading Network Models and and Dependency Code Library](#en-us_topic_0167511792_section13446115712539).
 
     For example, upload the model file  **faster\_rcnn.om**  to the  **/home/HwHiAiUser/models**  directory on the host.
 
@@ -101,7 +101,7 @@ Before running the application, obtain the source code package and configure the
 
     The models used in the application are converted models that adapt to the Ascend 310 chipset. For details about how to download this kind of models and the original network models, see  [Table 1](#en-us_topic_0167511792_table0531392153). If you have a better model solution, you are welcome to share it at  [https://github.com/Ascend/models](https://github.com/Ascend/models).
 
-     Download the network models files (.om files) to the **sample-objectdetection/script** directory.
+     Upload the network models files (.om files) to the directory of the HwHiAiUser user on the Host.
 
     **Table  1**  Models used in Object Detection Network Connectivity
 
@@ -134,7 +134,7 @@ Before running the application, obtain the source code package and configure the
 
 -   Download the dependent software libraries
 
-    Download the dependent software libraries to the **sample-objectdetection/script** directory.
+    Upload the dependent software libraries to the Host.
 
     **Table  2**  Download the dependent software library
 
