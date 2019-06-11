@@ -134,7 +134,7 @@ Before running the application, obtain the source code package and configure the
 
 -   Download the dependent software libraries
 
-    Download the dependent software libraries to the **sample-classification/script** directory.
+    Download the dependent software libraries to the **sample-objectdetection/script** directory.
 
     **Table  2**  Download the dependent software library
 
