@@ -40,7 +40,7 @@
 
 ## 部署<a name="zh-cn_topic_0167429321_section3723145213347"></a>
 
-1.  以Mind Studio安装用户进入sample-classification应用代码所在根目录，如**_/home/ascend/sample-objectdetection_**。
+1.  以Mind Studio安装用户进入sample-classification应用代码所在根目录，如_/home/ascend/sample-objectdetection_。
 2.  执行部署脚本，进行工程环境准备，包括公共库的编译与部署、应用的编译与部署等操作。
 
     bash deploy.sh  _host\_ip_ _model\_mode_
@@ -89,7 +89,7 @@
     -   -o/output\_path：输出图片的目录，默认为当前目录。
     -   -c/output\_categories：faster\_rcnn检测的类别数\(包含背景\)，为2\~32之间的整数，默认为值为21。
 
-    其他详细参数请执行**python3 run\_object\_detection\_faster\_rcnn.py**** ****--help**命令参见帮助信息。
+    其他详细参数请执行**python3 run\_object\_detection\_faster\_rcnn.py --help**命令参见帮助信息。
 
 
 ## 网络模型及公共代码库下载<a name="zh-cn_topic_0167429321_section92241245122511"></a>
