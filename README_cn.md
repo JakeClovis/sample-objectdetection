@@ -80,7 +80,7 @@
 
     **python3 run\_object\_detection\_faster\_rcnn.py -m  _\~/models/faster\_rcnn.om_  -w  _800_  -h  _600_  -i**
 
-    **_./example.jpg_  -o  _./out_  -c_ 21_**
+    **_./example.jpg_  -o  _./out_  -c _21_**
 
     -   -m/--model\_path：离线模型路径。
     -   -w/model\_width：模型的输入图片宽度，为16\~4096之间的整数。

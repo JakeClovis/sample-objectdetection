@@ -83,7 +83,7 @@ Before running the application, obtain the source code package and configure the
 
     **python3 run\_object\_detection\_faster\_rcnn.py -m  _\~/models/faster\_rcnn.om_  -w  _800_  -h  _600_  -i**
 
-    **_./example.jpg_  -o  _./out_  -c_ 21_**
+    **_./example.jpg_  -o  _./out_  -c _21_**
 
     -   **-m/--model\_path**: offline model path
     -   **-w/model\_width**: width of the input image of a model. The value is an integer ranging from 16 to 4096.
