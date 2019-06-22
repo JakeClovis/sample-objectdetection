@@ -16,7 +16,7 @@ Before running the application, obtain the source code package and configure the
 
 1.  Obtain the source code package.
 
-    Download all the code in the sample-facedetection repository at  [https://github.com/Ascend/sample-objectdetection](https://github.com/Ascend/sample-objectdetection)  to any directory on Ubuntu Server where Mind Studio is located as the Mind Studio installation user, for example,  _/home/ascend/sample-objectdetection_.
+    Download all the code in the sample-objectdetection repository at  [https://github.com/Ascend/sample-objectdetection](https://github.com/Ascend/sample-objectdetection)  to any directory on Ubuntu Server where Mind Studio is located as the Mind Studio installation user, for example,  _/home/ascend/sample-objectdetection_.
 
 2.  Log in to Ubuntu Server where Mind Studio is located as the Mind Studio installation user and set the environment variable  **DDK\_HOME**.
 
@@ -41,7 +41,7 @@ Before running the application, obtain the source code package and configure the
 
 ## Deployment<a name="en-us_topic_0167511792_section1823144520529"></a>
 
-1.  Access the root directory where the cvnetworkverify application code is located as the Mind Studio installation user, for example,  **_/home/ascend/sample-objectdetection_**.
+1.  Access the root directory where the object detection application code is located as the Mind Studio installation user, for example,  **_/home/ascend/sample-objectdetection_**.
 2.  Run the deployment script to prepare the project environment, including compiling and deploying the ascenddk public library and application.
 
     bash deploy.sh  _host\_ip_ _model\_mode_
