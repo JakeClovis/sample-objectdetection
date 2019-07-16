@@ -41,7 +41,7 @@
 ## 部署<a name="zh-cn_topic_0167429321_section3723145213347"></a>
 
 1.  以MindSpore Studio安装用户进入目标检测网络应用代码所在根目录，如 _/home/ascend/sample-objectdetection_。
-2.  执行部署脚本，进行工程环境准备，包括公共库的编译与部署、应用的编译与部署等操作。
+2.  执行部署脚本，进行工程环境准备，包括公共库的编译与部署、应用的编译与部署等操作,其中Presenter Server用于接收Application发送过来的数据并通过浏览器进行结果展示。
 
     bash deploy.sh  _host\_ip_ _model\_mode_
 
