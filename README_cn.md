@@ -56,6 +56,13 @@
 3.  参考[网络模型及公共代码库下载](#zh-cn_topic_0167429321_section92241245122511)将需要使用的离线模型文件与需要推理的图片上传至Host侧任一属组为HwHiAiUser用户的目录。
 
     例如将模型文件**faster\_rcnn.om**上传到Host侧的“/home/HwHiAiUser/models“目录下。
+    
+    图片要求如下:
+
+    - 格式：jpg、png、bmp。
+    - 输入图片宽度：16px~4096px之间的整数。
+    - 输入图片高度：16px~4096px之间的整数。
+
 
 
 ## 运行<a name="zh-cn_topic_0167429321_section87121843104920"></a>
@@ -116,7 +123,7 @@
     <tbody><tr id="zh-cn_topic_0167429321_row1925111472431"><td class="cellrowborder" valign="top" width="19.53%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167429321_p52511447194311"><a name="zh-cn_topic_0167429321_p52511447194311"></a><a name="zh-cn_topic_0167429321_p52511447194311"></a>目标检测网络模型</p>
     <p id="zh-cn_topic_0167429321_p32528473439"><a name="zh-cn_topic_0167429321_p32528473439"></a><a name="zh-cn_topic_0167429321_p32528473439"></a>(faster_rcnn.om)</p>
     </td>
-    <td class="cellrowborder" valign="top" width="29.970000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167429321_p15252247154312"><a name="zh-cn_topic_0167429321_p15252247154312"></a><a name="zh-cn_topic_0167429321_p15252247154312"></a>此模型为<strong id="zh-cn_topic_0167429321_b17252134715438"><a name="zh-cn_topic_0167429321_b17252134715438"></a><a name="zh-cn_topic_0167429321_b17252134715438"></a>网络贯通</strong>应用中使用的模型。</p>
+    <td class="cellrowborder" valign="top" width="29.970000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167429321_p15252247154312"><a name="zh-cn_topic_0167429321_p15252247154312"></a><a name="zh-cn_topic_0167429321_p15252247154312"></a>此模型为<strong id="zh-cn_topic_0167429321_b17252134715438"><a name="zh-cn_topic_0167429321_b17252134715438"></a><a name="zh-cn_topic_0167429321_b17252134715438"></a>检测网络</strong>应用中使用的模型。</p>
     <p id="zh-cn_topic_0167429321_p12521447144318"><a name="zh-cn_topic_0167429321_p12521447144318"></a><a name="zh-cn_topic_0167429321_p12521447144318"></a>是基于Caffe的Faster RCNN模型。</p>
     </td>
     <td class="cellrowborder" valign="top" width="32.01%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167429321_p8252247164310"><a name="zh-cn_topic_0167429321_p8252247164310"></a><a name="zh-cn_topic_0167429321_p8252247164310"></a>请从<a href="https://github.com/Ascend/models/" target="_blank" rel="noopener noreferrer">https://github.com/Ascend/models/</a>仓的computer_vision/<span>object_detect</span><span>/</span><span>faster_rcnn</span>目录中下载。</p>
