@@ -1,6 +1,6 @@
 EN|[CN](README_cn.md)
 
-The network connectivity application runs on the Atlas 200 DK or the AI acceleration cloud server and implements the inference function by using Faster R-CNN object detection network.
+The Object Detection application runs on the Atlas 200 DK or the AI acceleration cloud server and implements the inference function by using Faster R-CNN object detection network.
 
 ## Prerequisites<a name="en-us_topic_0167511792_section412314183119"></a>
 
@@ -59,6 +59,11 @@ Before running the application, obtain the source code package and configure the
 3.  Upload the offline model file to be used and the image which requires inference to the directory of the  **HwHiAiUser**  user on the Host. For details, see  [Downloading Network Models and and Dependency Code Library](#en-us_topic_0167511792_section13446115712539).
 
     For example, upload the model file  **faster\_rcnn.om**  to the  **/home/HwHiAiUser/models**  directory on the host.
+    
+    The image requirements are as follows:
+    - Format: JPG, PNG, and BMP.
+    - Width of the input image: the value is an integer ranging from 16px to 4096px.
+    - Height of the input image: the value is an integer ranging from 16px to 4096px.
 
 
 ## Running<a name="en-us_topic_0167511792_section1665916172539"></a>
@@ -71,7 +76,7 @@ Before running the application, obtain the source code package and configure the
 
     For the AI acceleration cloud server,  _**host\_ip**_  indicates the IP address of the server where MindSpore Studio is located.
 
-2.  Go to the path of the executable file of network connectivity.
+2.  Go to the path of the executable file of Object Detection Application.
 
     **cd \~/HIAI\_PROJECTS/ascend\_workspace/objectdetection/out**
 
@@ -103,7 +108,7 @@ Before running the application, obtain the source code package and configure the
 
      Upload the network models files (.om files) to the directory of the **HwHiAiUser** user on the Host.
 
-    **Table  1**  Models used in Object Detection Network Connectivity
+    **Table  1**  Models used in Object Detection Application
 
     <a name="en-us_topic_0167511792_table0531392153"></a>
     <table><thead align="left"><tr id="en-us_topic_0167511792_row1154103991514"><th class="cellrowborder" valign="top" width="15.841584158415841%" id="mcps1.2.5.1.1"><p id="en-us_topic_0167511792_p195418397155"><a name="en-us_topic_0167511792_p195418397155"></a><a name="en-us_topic_0167511792_p195418397155"></a>Model Name</p>
@@ -119,7 +124,7 @@ Before running the application, obtain the source code package and configure the
     <tbody><tr id="en-us_topic_0167511792_row4954262415"><td class="cellrowborder" valign="top" width="15.841584158415841%" headers="mcps1.2.5.1.1 "><p id="en-us_topic_0167511792_p1096112620413"><a name="en-us_topic_0167511792_p1096112620413"></a><a name="en-us_topic_0167511792_p1096112620413"></a>Network model for object detection</p>
     <p id="en-us_topic_0167511792_p1166611151750"><a name="en-us_topic_0167511792_p1166611151750"></a><a name="en-us_topic_0167511792_p1166611151750"></a>(<strong id="en-us_topic_0167511792_b3400194911919"><a name="en-us_topic_0167511792_b3400194911919"></a><a name="en-us_topic_0167511792_b3400194911919"></a>faster_rcnn.om</strong>)</p>
     </td>
-    <td class="cellrowborder" valign="top" width="21.782178217821784%" headers="mcps1.2.5.1.2 "><p id="en-us_topic_0167511792_p69611263419"><a name="en-us_topic_0167511792_p69611263419"></a><a name="en-us_topic_0167511792_p69611263419"></a>This model is used in the <strong id="en-us_topic_0167511792_b1742163175610"><a name="en-us_topic_0167511792_b1742163175610"></a><a name="en-us_topic_0167511792_b1742163175610"></a>network connectivity</strong> application.</p>
+    <td class="cellrowborder" valign="top" width="21.782178217821784%" headers="mcps1.2.5.1.2 "><p id="en-us_topic_0167511792_p69611263419"><a name="en-us_topic_0167511792_p69611263419"></a><a name="en-us_topic_0167511792_p69611263419"></a>This model is used in the <strong id="en-us_topic_0167511792_b1742163175610"><a name="en-us_topic_0167511792_b1742163175610"></a><a name="en-us_topic_0167511792_b1742163175610"></a>Object Detection</strong> application.</p>
     <p id="en-us_topic_0167511792_p135229539519"><a name="en-us_topic_0167511792_p135229539519"></a><a name="en-us_topic_0167511792_p135229539519"></a>It is a Faster R-CNN model based on Caffe.</p>
     </td>
     <td class="cellrowborder" valign="top" width="28.425742574257427%" headers="mcps1.2.5.1.3 "><p id="en-us_topic_0167511792_p10776202712619"><a name="en-us_topic_0167511792_p10776202712619"></a><a name="en-us_topic_0167511792_p10776202712619"></a>Download the model from the <strong id="en-us_topic_0167511792_b665726138"><a name="en-us_topic_0167511792_b665726138"></a><a name="en-us_topic_0167511792_b665726138"></a>computer_vision/object_detect/faster_rcnn</strong> directory in the <a href="https://github.com/Ascend/models/" target="_blank" rel="noopener noreferrer">https://github.com/Ascend/models/</a> repository.</p>
