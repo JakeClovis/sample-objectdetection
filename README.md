@@ -1,3 +1,5 @@
+EN|[CN](README_cn.md)
+
 # Object Detection<a name="EN-US_TOPIC_0167609448"></a>
 
 The object detection application runs on the Atlas 200 DK or the AI acceleration cloud server and implements the inference function by using Faster R-CNN object detection network.
