@@ -1,3 +1,5 @@
+中文|[英文](README.md)
+
 # Faster-R-CNN检测网络应用<a name="ZH-CN_TOPIC_0185837719"></a>
 
 本Application支持运行在Atlas 200 DK或者AI加速云服务器上，实现了对faster-rcnn目标检测网络的推理功能。
